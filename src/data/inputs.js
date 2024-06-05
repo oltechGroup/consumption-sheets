@@ -1,7 +1,7 @@
 export const doctors = [
   {
     id: 1,
-    name: "Dr. Laureani",
+    name: "Dra. Ana Cristina King Martínez",
     specialty: "",
     location: "",
     phone: "",
@@ -9,7 +9,7 @@ export const doctors = [
   },
   {
     id: 2,
-    name: "Dr. Espinosa",
+    name: "Dra. Rosa Daniela Ayala Ruiz",
     specialty: "",
     location: "",
     phone: "",
@@ -17,7 +17,7 @@ export const doctors = [
   },
   {
     id: 3,
-    name: "Dra. King",
+    name: "Dr. Homero Reguera Benítez",
     specialty: "",
     location: "",
     phone: "",
@@ -25,7 +25,7 @@ export const doctors = [
   },
   {
     id: 4,
-    name: "Dr. Villamil",
+    name: "Dr. Roberto Fernando Espinosa López",
     specialty: "",
     location: "",
     phone: "",
@@ -33,7 +33,7 @@ export const doctors = [
   },
   {
     id: 5,
-    name: "Dr. Pacheco",
+    name: "Dr. Jesús González Laureani",
     specialty: "",
     location: "",
     phone: "",
@@ -41,7 +41,7 @@ export const doctors = [
   },
   {
     id: 6,
-    name: "Dr. Reguera",
+    name: "Dr. Arturo Saldívar Moreno",
     specialty: "",
     location: "",
     phone: "",
@@ -49,7 +49,7 @@ export const doctors = [
   },
   {
     id: 7,
-    name: "Dr. Saldivar",
+    name: "Dr. Gerardo Cortez Aguilar",
     specialty: "",
     location: "",
     phone: "",
@@ -57,7 +57,39 @@ export const doctors = [
   },
   {
     id: 8,
-    name: "Dr. Cortes",
+    name: "Dr. Gustavo Jurado Barrios",
+    specialty: "",
+    location: "",
+    phone: "",
+    email: "",
+  },
+  {
+    id: 9,
+    name: "Dr. Aldo Manuel Bauza Merodio",
+    specialty: "",
+    location: "",
+    phone: "",
+    email: "",
+  },
+  {
+    id: 10,
+    name: "Dr. Carlos Pacheco Díaz",
+    specialty: "",
+    location: "",
+    phone: "",
+    email: "",
+  },
+  {
+    id: 11,
+    name: "Dr. Octavio Sierra Martínez",
+    specialty: "",
+    location: "",
+    phone: "",
+    email: "",
+  },
+  {
+    id: 12,
+    name: "Dr. Eduardo Hernandez Mendez Villamil",
     specialty: "",
     location: "",
     phone: "",
@@ -68,7 +100,7 @@ export const doctors = [
 export const instrumentalists = [
   {
     id: 1,
-    name: "Diego",
+    name: "Kenia Giovanna Vazquez Sagoya",
     specialty: "",
     location: "",
     phone: "",
@@ -76,7 +108,7 @@ export const instrumentalists = [
   },
   {
     id: 2,
-    name: "Israel",
+    name: "Claudia Berenice Galicia Sanchez",
     specialty: "",
     location: "",
     phone: "",
@@ -84,7 +116,7 @@ export const instrumentalists = [
   },
   {
     id: 3,
-    name: "Sergio",
+    name: "Alberto Sánchez Vázquez",
     specialty: "",
     location: "",
     phone: "",
@@ -92,6 +124,38 @@ export const instrumentalists = [
   },
   {
     id: 4,
+    name: "María Fernanda Zavala Valle",
+    specialty: "",
+    location: "",
+    phone: "",
+    email: "",
+  },
+  {
+    id: 5,
+    name: "Israel",
+    specialty: "",
+    location: "",
+    phone: "",
+    email: "",
+  },
+  {
+    id: 6,
+    name: "Sergio",
+    specialty: "",
+    location: "",
+    phone: "",
+    email: "",
+  },
+  {
+    id: 7,
+    name: "Diego",
+    specialty: "",
+    location: "",
+    phone: "",
+    email: "",
+  },
+  {
+    id: 8,
     name: "Externo P.P",
     specialty: "",
     location: "",
@@ -192,4 +256,4 @@ export const hospitals = [
     phone: "",
     email: "",
   },
-]
+];

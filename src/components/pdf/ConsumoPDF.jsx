@@ -255,7 +255,7 @@ const ConsumoPDF = ({ info, partidas }) => {
           </View>
 
           <View style={styles.sectionFirmaItem}>
-            <Text>Dra. King</Text>
+            <Text>Dra. Ana Cristina King Martínez</Text>
           </View>
         </View>
 
