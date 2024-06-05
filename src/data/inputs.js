@@ -17,7 +17,7 @@ export const doctors = [
   },
   {
     id: 3,
-    name: "Dra. king",
+    name: "Dra. King",
     specialty: "",
     location: "",
     phone: "",
