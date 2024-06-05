@@ -1,5 +1,5 @@
 .container {
-  max-width: 75rem;
+  max-width: 80rem;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -18,11 +18,18 @@
   height: 2.5rem;
 }
 
+.containerForm {
+  overflow: auto;
+}
+.buttonsForm {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
 .form {
   max-width: 400px;
   width: 100%;
 }
-
 .formGroup {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -35,6 +42,12 @@
 }
 .buttonForm {
   align-self: flex-end;
+}
+
+/* table */
+.buttonActions {
+  display: flex;
+  gap: 1rem;
 }
 
 @media (max-width: 1020px) {

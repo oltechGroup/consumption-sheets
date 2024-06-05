@@ -11,6 +11,7 @@ import {
   Autocomplete,
   Checkbox,
   FormControl,
+  IconButton,
   InputLabel,
   ListItemText,
   MenuItem,
@@ -20,6 +21,8 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import logo from "./assets/logo.svg";
+import { Pencil, Trash } from "@phosphor-icons/react";
+import { doctors, hospitals, instrumentalists, supports } from "./data/inputs";
 
 function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
@@ -30,14 +33,14 @@ const rows = [
     1,
     "OST-001",
     "Placas anatómicas bloqueadas y de ángulo variable con pernos y tornillos de bloqueo requeridos (diferentes tamaños y/o diámetros dependiendo del sitio de fractura). Placas de titanio ajustables a la forma y tamaño de cada segmento óseo, incluye pernos y tornillos de bloqueo con angulación variable (mayor o igual a 15°) y fija.",
-    "PAQUETE",
+    2,
     16000
   ),
   createData(
     2,
     "OST-001",
     "Placas anatómicas bloqueadas y de ángulo variable con pernos y tornillos de bloqueo requeridos (diferentes tamaños y/o diámetros dependiendo del sitio de fractura). Placas de titanio ajustables a la forma y tamaño de cada segmento óseo, incluye pernos y tornillos de bloqueo con angulación variable (mayor o igual a 15°) y fija.",
-    "PAQUETE",
+    4,
     16000
   ),
 ];
@@ -171,31 +174,31 @@ const top100Films = [
 ];
 
 function App() {
-  // Multiple Select
-  const [personName, setPersonName] = useState([]);
+  
+  // Multiple Select States
+  const [instrumentalistName, setInstrumentalistName] = useState([]);
+  const [supportName, setSupportName] = useState([]);
 
-  const handleChange = (event) => {
+  const handleChangeInstrumentalist = (event) => {
     const {
       target: { value },
     } = event;
-    setPersonName(
+    setInstrumentalistName(
       // On autofill we get a stringified value.
       typeof value === "string" ? value.split(",") : value
     );
   };
 
-  const names = [
-    "Oliver Hansen",
-    "Van Henry",
-    "April Tucker",
-    "Ralph Hubbard",
-    "Omar Alexander",
-    "Carlos Abbott",
-    "Miriam Wagner",
-    "Bradley Wilkerson",
-    "Virginia Andrews",
-    "Kelly Snyder",
-  ];
+  const handleChangeSupport = (event) => {
+    const {
+      target: { value },
+    } = event;
+    setSupportName(
+      // On autofill we get a stringified value.
+      typeof value === "string" ? value.split(",") : value
+    );
+  };
+  // End Multiple Select States
 
   const ITEM_HEIGHT = 48;
   const ITEM_PADDING_TOP = 8;
@@ -219,66 +222,90 @@ function App() {
         <h2 style={{ marginBottom: 5 }}>Información</h2>
         <div className={styles.sectionForm}>
           <div className={styles.formGroup}>
-            <FormControl fullWidth size="small">
-              <InputLabel id="demo-simple-select-label">Doctor</InputLabel>
-              <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                label="Age"
-              >
-                <MenuItem value={10}>Ten</MenuItem>
-                <MenuItem value={20}>Twenty</MenuItem>
-                <MenuItem value={30}>Thirty</MenuItem>
-              </Select>
-            </FormControl>
-            <FormControl fullWidth size="small">
-              <InputLabel id="demo-multiple-checkbox-label">
-                Tecnicos
-              </InputLabel>
-              <Select
-                labelId="demo-multiple-checkbox-label"
-                id="demo-multiple-checkbox"
-                multiple
-                value={personName}
-                onChange={handleChange}
-                input={<OutlinedInput label="Tag" />}
-                renderValue={(selected) => selected.join(", ")}
-                MenuProps={MenuProps}
-              >
-                {names.map((name) => (
-                  <MenuItem key={name} value={name}>
-                    <Checkbox checked={personName.indexOf(name) > -1} />
-                    <ListItemText primary={name} />
-                  </MenuItem>
-                ))}
-              </Select>
-            </FormControl>
-          </div>
-          <TextField
-            fullWidth
-            size="small"
-            id="outlined-basic"
-            label="Outlined"
-            variant="outlined"
-          />
-          <div className={styles.formGroup}>
             <TextField
               fullWidth
-              size="small"
               id="outlined-basic"
               label="Paciente"
               variant="outlined"
             />
-            <FormControl fullWidth size="small">
+            <FormControl fullWidth>
               <InputLabel id="demo-simple-select-label">Hospital</InputLabel>
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
                 label="Age"
               >
-                <MenuItem value={10}>Ten</MenuItem>
-                <MenuItem value={20}>Twenty</MenuItem>
-                <MenuItem value={30}>Thirty</MenuItem>
+                {hospitals.map((hospital) => (
+                  <MenuItem key={hospital.id} value={hospital.id}>
+                    {hospital.name}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+          </div>
+          <div className={styles.formGroup}>
+            <FormControl fullWidth>
+              <InputLabel id="demo-simple-select-label">Doctor</InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                label="Age"
+              >
+                {doctors.map((doctor) => (
+                  <MenuItem key={doctor.id} value={doctor.id}>
+                    {doctor.name}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+            <TextField
+              fullWidth
+              id="outlined-basic"
+              label="Fecha"
+              variant="outlined"
+            />
+          </div>
+          <div className={styles.formGroup}>
+            <FormControl fullWidth>
+              <InputLabel id="demo-multiple-checkbox-label">
+                Instrumentista
+              </InputLabel>
+              <Select
+                labelId="demo-multiple-checkbox-label"
+                id="demo-multiple-checkbox"
+                multiple
+                value={instrumentalistName}
+                onChange={handleChangeInstrumentalist}
+                input={<OutlinedInput label="Tag" />}
+                renderValue={(selected) => selected.join(", ")}
+                MenuProps={MenuProps}
+              >
+                {instrumentalists.map((instrumentalist) => (
+                  <MenuItem key={instrumentalist.name} value={instrumentalist.name}>
+                    <Checkbox checked={instrumentalistName.indexOf(instrumentalist.name) > -1} />
+                    <ListItemText primary={instrumentalist.name} />
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+            <FormControl fullWidth>
+              <InputLabel id="demo-multiple-checkbox-label">Apoyos</InputLabel>
+              <Select
+                labelId="demo-multiple-checkbox-label"
+                id="demo-multiple-checkbox"
+                multiple
+                value={supportName}
+                onChange={handleChangeSupport}
+                input={<OutlinedInput label="Tag" />}
+                renderValue={(selected) => selected.join(", ")}
+                MenuProps={MenuProps}
+              >
+                {supports.map((support) => (
+                  <MenuItem key={support.name} value={support.name}>
+                    <Checkbox checked={supportName.indexOf(support.name) > -1} />
+                    <ListItemText primary={support.name} />
+                  </MenuItem>
+                ))}
               </Select>
             </FormControl>
           </div>
@@ -288,7 +315,6 @@ function App() {
         <div className={styles.sectionForm}>
           <Autocomplete
             fullWidth
-            size="small"
             disablePortal
             id="combo-box-demo"
             options={top100Films}
@@ -296,7 +322,6 @@ function App() {
           />
           <TextField
             fullWidth
-            size="small"
             id="outlined-number"
             label="Number"
             type="number"
@@ -304,11 +329,19 @@ function App() {
               shrink: true,
             }}
           />
-          <Button variant="contained" className={styles.buttonForm}>Insertar</Button>
+          <Button variant="outlined" className={styles.buttonForm}>
+            Insertar
+          </Button>
         </div>
       </section>
 
-      <section>
+      <section className={styles.containerForm}>
+        <div className={styles.buttonsForm}>
+          <Button variant="contained">Imprimir Hoja</Button>
+          <Button variant="outlined" color="error">
+            Borrar Partidas
+          </Button>
+        </div>
         <TableContainer component={Paper}>
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>
@@ -316,8 +349,9 @@ function App() {
                 <TableCell>Partida</TableCell>
                 <TableCell>Código</TableCell>
                 <TableCell>Descripción</TableCell>
-                <TableCell>Unidad de medida</TableCell>
-                <TableCell>PV 2024</TableCell>
+                <TableCell>Cantidad</TableCell>
+                <TableCell>Precio</TableCell>
+                <TableCell></TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -330,9 +364,18 @@ function App() {
                     {row.name}
                   </TableCell>
                   <TableCell>{row.calories}</TableCell>
-                  <TableCell>{row.fat}</TableCell>
+                  <TableCell style={{ fontSize: 12 }}>{row.fat}</TableCell>
                   <TableCell>{row.carbs}</TableCell>
                   <TableCell>{row.protein}</TableCell>
+                  <TableCell className={styles.buttonActions}>
+                    <IconButton aria-label="delete">
+                      <Trash size={25} weight="fill" />
+                    </IconButton>
+
+                    <IconButton aria-label="edit">
+                      <Pencil size={25} weight="fill" />
+                    </IconButton>
+                  </TableCell>
                 </TableRow>
               ))}
             </TableBody>
