@@ -234,7 +234,7 @@ export const supports = [
 export const hospitals = [
   {
     id: 1,
-    name: "Hospital González GEA",
+    name: "Hospital General Dr. Manuel Gea González",
     specialty: "",
     location: "",
     phone: "",
