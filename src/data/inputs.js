@@ -140,7 +140,7 @@ export const instrumentalists = [
   },
   {
     id: 6,
-    name: "Sergio ",
+    name: "Sergio Venegas Rodríguez",
     specialty: "",
     location: "",
     phone: "",
