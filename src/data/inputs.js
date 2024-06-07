@@ -49,7 +49,7 @@ export const doctors = [
   },
   {
     id: 7,
-    name: "Dr. Gerardo Cortez Aguilar",
+    name: "Dr. Gerardo Cortes Aguilar",
     specialty: "",
     location: "",
     phone: "",
@@ -132,7 +132,7 @@ export const instrumentalists = [
   },
   {
     id: 5,
-    name: "Israel",
+    name: "Israel Navarro",
     specialty: "",
     location: "",
     phone: "",
@@ -140,7 +140,7 @@ export const instrumentalists = [
   },
   {
     id: 6,
-    name: "Sergio",
+    name: "Sergio ",
     specialty: "",
     location: "",
     phone: "",
@@ -148,7 +148,7 @@ export const instrumentalists = [
   },
   {
     id: 7,
-    name: "Diego",
+    name: "Diego García",
     specialty: "",
     location: "",
     phone: "",
