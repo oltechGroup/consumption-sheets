@@ -117,11 +117,14 @@ const ConsumoPDF = ({ info, partidas }) => {
       <Page style={styles.page} size={"A4"}>
         <View style={styles.containerFolio}>
           <Text>
-            FOLIO: OLT{new Date().getDay()}
-            {new Date().getMonth()}
-            {new Date().getFullYear()}-{info.folio}
+            FOLIO: OLT{info.date.split("-")[2]}
+            {info.date.split("-")[1]}
+            {info.date.split("-")[0]}-{info.folio}
           </Text>
-          <Text>{new Date().toLocaleDateString()}</Text>
+          <Text>
+            {info.date.split("-")[2]}/{info.date.split("-")[1]}/
+            {info.date.split("-")[0]}
+          </Text>
         </View>
 
         <View style={{ marginBottom: 20 }}>
