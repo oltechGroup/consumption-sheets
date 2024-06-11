@@ -625,7 +625,7 @@ export const partidasAdjudicadas = [
     id: 90,
     code: "ATP-001",
     description: "Cemento óseo medicado o no medicado (1 dosis).",
-    " price ": 4500,
+    price: 4500,
   },
   {
     id: 91,
@@ -666,31 +666,31 @@ export const partidasAdjudicadas = [
     id: 96,
     code: "INJ-002",
     description: "Injerto óseo en chips 5 cc.",
-    " price ": 11000,
+    price: 11000,
   },
   {
     id: 97,
     code: "INJ-003",
     description: "Injerto óseo en chips 10 cc.",
-    " price ": 18000,
+    price: 18000,
   },
   {
     id: 98,
     code: "INJ-004",
     description: "Injerto óseo en chips 15 cc.",
-    " price ": 14000,
+    price: 14000,
   },
   {
     id: 99,
     code: "INJ-005",
     description: "Matriz ósea 10 cc sola o con chips",
-    " price ": 30000,
+    price: 30000,
   },
   {
     id: 100,
     code: "INJ-006",
     description: "Dermis acelular 4x4 cm.",
-    " price ": 25000,
+    price: 25000,
   },
   {
     id: 101,
@@ -710,7 +710,7 @@ export const partidasAdjudicadas = [
     id: 103,
     code: "INJ-009",
     description: "Hoja dermatomo 80/40mm.",
-    " price ": 10000,
+    price: 10000,
   },
   {
     id: 104,
@@ -737,13 +737,13 @@ export const partidasAdjudicadas = [
     id: 107,
     code: "INJ-013",
     description: "Apósito hidrocoloide primario. ",
-    " price ": 2900,
+    price: 2900,
   },
   {
     id: 108,
     code: "INJ-014",
     description: "Apósito hidrocoloide en gel. ",
-    " price ": 2900,
+    price: 2900,
   },
   {
     id: 109,
@@ -756,7 +756,7 @@ export const partidasAdjudicadas = [
     id: 110,
     code: "INJ-016",
     description: "Cánister para sistema de presión negativa de 500cc.",
-    " price ": 3900,
+    price: 3900,
   },
   {
     id: 111,
@@ -795,7 +795,7 @@ export const partidasAdjudicadas = [
     id: 116,
     code: "INJ-022",
     description: "Hidro bisturí con puntas de diferentes angulaciones",
-    " price ": 14000,
+    price: 14000,
   },
   {
     id: 117,
@@ -807,13 +807,13 @@ export const partidasAdjudicadas = [
     id: 118,
     code: "INJ-024",
     description: "Matriz ósea de 1cc.",
-    " price ": 12000,
+    price: 12000,
   },
   {
     id: 119,
     code: "INJ-025",
     description: "Matriz ósea de 5cc.",
-    " price ": 19000,
+    price: 19000,
   },
   {
     id: 120,
@@ -833,7 +833,7 @@ export const partidasAdjudicadas = [
     id: 122,
     code: "ORB-002",
     description: '"Estoquinete (rollo) de 2, 3"" y 4"". "',
-    " price ": 915,
+    price: 915,
   },
   {
     id: 123,
@@ -874,7 +874,7 @@ export const partidasAdjudicadas = [
     id: 128,
     code: "ORB-008",
     description: "Andadera de 4 puntos sin ruedas de diferentes tamaños.  ",
-    " price ": 900,
+    price: 900,
   },
   {
     id: 129,
@@ -957,7 +957,7 @@ export const partidasAdjudicadas = [
     id: 140,
     code: "ORB-020",
     description: "Muleta de manos libres tipo E-walk.",
-    " price ": 4000,
+    price: 4000,
   },
   {
     id: 141,
@@ -970,7 +970,7 @@ export const partidasAdjudicadas = [
     id: 142,
     code: "ORB-022",
     description: "Crioterapia universal que incluya pad y motor",
-    " price ": 4500,
+    price: 4500,
   },
   {
     id: 143,
@@ -990,7 +990,7 @@ export const partidasAdjudicadas = [
     id: 145,
     code: "ORB-025",
     description: "Cánula yankauer plástica",
-    " price ": 150,
+    price: 150,
   },
   {
     id: 146,
@@ -1038,7 +1038,7 @@ export const partidasAdjudicadas = [
     id: 152,
     code: "ORB-032",
     description: "Funda esteril univarsal para  artroscopio",
-    " price ": 2500,
+    price: 2500,
   },
   {
     id: 153,
