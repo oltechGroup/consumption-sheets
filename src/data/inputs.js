@@ -156,6 +156,14 @@ export const instrumentalists = [
   },
   {
     id: 8,
+    name: "Antonio",
+    specialty: "",
+    location: "",
+    phone: "",
+    email: "",
+  },
+  {
+    id: 9,
     name: "Externo P.P",
     specialty: "",
     location: "",
