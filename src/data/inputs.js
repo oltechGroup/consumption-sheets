@@ -231,6 +231,14 @@ export const supports = [
   },
   {
     id: 8,
+    name: "Antonio",
+    specialty: "",
+    location: "",
+    phone: "",
+    email: "",
+  },
+  {
+    id: 9,
     name: "Otro",
     specialty: "",
     location: "",
