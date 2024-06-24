@@ -950,7 +950,7 @@ export const partidasAdjudicadas = [
     id: 139,
     code: "ORB-019",
     description:
-      '"Vendas de fibra vidrio 2, 3"" y 4"", a seleccionar de acuerdo con las necesidades del paciente."',
+      '"Vendas de fibra vidrio 2", 3" y 4", a seleccionar de acuerdo con las necesidades del paciente."',
     price: 1800,
   },
   {
@@ -1037,7 +1037,7 @@ export const partidasAdjudicadas = [
   {
     id: 152,
     code: "ORB-032",
-    description: "Funda esteril univarsal para  artroscopio",
+    description: "Funda esteril universal para  artroscopio",
     price: 2500,
   },
   {

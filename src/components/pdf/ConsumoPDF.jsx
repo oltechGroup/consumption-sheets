@@ -94,6 +94,7 @@ const styles = StyleSheet.create({
   },
   sectionFirmaItem: {
     width: "50%",
+    fontSize: 10,
     textAlign: "center",
     borderStyle: "solid",
     borderTopWidth: 1,
@@ -105,10 +106,36 @@ const styles = StyleSheet.create({
     height: 100,
     marginHorizontal: "auto",
   },
+  divider: {
+    borderTop: 1,
+    borderColor: "#bfbfbf",
+    height: 2,
+    width: "120%",
+    position: "absolute",
+    bottom: 100,
+  }
 });
 
-const formatMoney = (amount) => {
-  return `$${amount.toFixed(2)}`;
+const formatMoney = (number, currency = '$') => {
+  // Verifica si el número es válido
+  if (isNaN(number)) {
+    return "Invalid number";
+  }
+
+  // Convierte el número a un string con dos decimales
+  let formattedNumber = number.toFixed(2);
+
+  // Divide el número en partes enteras y decimales
+  let parts = formattedNumber.split(".");
+
+  // Agrega comas como separadores de miles a la parte entera
+  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+  // Une las partes enteras y decimales
+  formattedNumber = parts.join(".");
+
+  // Agrega el símbolo de moneda al principio y devuelve el resultado
+  return currency + formattedNumber;
 };
 
 const ConsumoPDF = ({ info, partidas }) => {
@@ -262,6 +289,7 @@ const ConsumoPDF = ({ info, partidas }) => {
           </View>
         </View>
 
+        <View style={styles.divider}></View>
         {/* Images layout */}
         <Image src={logo} style={styles.logo} />
         <Image src={footer} style={styles.footer} />
