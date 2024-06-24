@@ -9,7 +9,7 @@ import {
 } from "@react-pdf/renderer";
 
 import logo from "../../assets/images/logo-name.png";
-import footer from "../../assets/images/footer.png";
+import footer from "../../assets/images/footer-2.jpg";
 import lateral from "../../assets/images/franja-lateral.png";
 
 // Create styles
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     bottom: 10,
     left: 16,
     right: 16,
-    width: 300,
+    width: 250,
   },
   logo: {
     position: "absolute",
@@ -106,14 +106,7 @@ const styles = StyleSheet.create({
     height: 100,
     marginHorizontal: "auto",
   },
-  divider: {
-    borderTop: 1,
-    borderColor: "#bfbfbf",
-    height: 2,
-    width: "120%",
-    position: "absolute",
-    bottom: 100,
-  }
+
 });
 
 const formatMoney = (number, currency = '$') => {
@@ -289,7 +282,6 @@ const ConsumoPDF = ({ info, partidas }) => {
           </View>
         </View>
 
-        <View style={styles.divider}></View>
         {/* Images layout */}
         <Image src={logo} style={styles.logo} />
         <Image src={footer} style={styles.footer} />
