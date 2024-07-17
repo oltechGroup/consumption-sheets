@@ -214,10 +214,11 @@ function Index() {
                 id="outlined-basic"
                 label="Fecha"
                 variant="outlined"
+                placeholder="Fecha"
                 type="date"
                 value={dataConsumo.date}
                 name="date"
-                style={{ padding: 10, fontFamily: "inherit", borderRadius: 5, border: '1px solid #ccc' }}
+                style={{ padding: 10, fontFamily: "inherit", borderRadius: 5, border: '1px solid #ccc', width: '100%' }}
                 onChange={handleChange}
               />
             </div>
