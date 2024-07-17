@@ -11,13 +11,22 @@ import {
 import logo from "../../assets/images/logo-name.png";
 import footer from "../../assets/images/footer-2.jpg";
 import lateral from "../../assets/images/franja-lateral.png";
+import footer2 from "../../assets/images/footer.jpg";
 
 // Create styles
 const styles = StyleSheet.create({
   page: {
     padding: 16,
     paddingTop: 80,
-    fontSize: 12,
+    fontSize: 11,
+    paddingRight: 46,
+    position: "relative",
+  },
+  page2: {
+    padding: 16,
+    paddingTop: 80,
+    fontSize: 10,
+    fontWeight: "extralight",
     paddingRight: 46,
     position: "relative",
   },
@@ -107,9 +116,35 @@ const styles = StyleSheet.create({
     marginHorizontal: "auto",
   },
 
+  // Encuesta de satisfacción
+  datosEncuesta: {
+    display: "flex",
+    flexDirection: "column",
+    gap: 5,
+    marginBottom: 10,
+  },
+  question: {
+    display: "flex",
+    flexDirection: "column",
+    gap: 5,
+    marginTop: 10,
+    fontWeight: "bold",
+  },
+  answers: {
+    display: "flex",
+    flexDirection: "row",
+    gap: 5,
+  },
+
+  oneQuestion: {
+    marginTop: 10,
+    paddingBottom: 20,
+    borderBottom: 1,
+    borderBottomColor: "#000",
+  },
 });
 
-const formatMoney = (number, currency = '$') => {
+const formatMoney = (number, currency = "$") => {
   // Verifica si el número es válido
   if (isNaN(number)) {
     return "Invalid number";
@@ -168,7 +203,8 @@ const ConsumoPDF = ({ info, partidas }) => {
             <Text>FECHA DE CX: {info.date}</Text>
             <Text>DOCTOR: {info.doctor}</Text>
             <Text>
-              TÉCNICOS: {info.instrumentalist} / {info.support}{" "}
+              TÉCNICOS: {info.instrumentalist}
+              {info.support}{" "}
             </Text>
             <Text>PACIENTE: {info.patient}</Text>
           </View>
@@ -285,6 +321,224 @@ const ConsumoPDF = ({ info, partidas }) => {
         {/* Images layout */}
         <Image src={logo} style={styles.logo} />
         <Image src={footer} style={styles.footer} />
+        <Image src={lateral} style={styles.lateral} />
+      </Page>
+
+      {/* Encuesta de satisfaccion */}
+      <Page style={styles.page2} size={"A4"}>
+        <View style={styles.containerFolio}>
+          <Text>
+            FOLIO: OLT{info.date.split("-")[2]}
+            {info.date.split("-")[1]}
+            {info.date.split("-")[0]}-{info.folio}
+          </Text>
+          <Text>
+            {info.date.split("-")[2]}/{info.date.split("-")[1]}/
+            {info.date.split("-")[0]}
+          </Text>
+        </View>
+
+        <Text
+          style={{
+            fontSize: 16,
+            marginBottom: 10,
+          }}
+        >
+          Encuesta de satisfacción
+        </Text>
+
+        <View style={styles.datosEncuesta}>
+          <Text>Nombre del médico: {info.doctor}</Text>
+          <Text>Nombre del instrumentista: {info.instrumentalist}</Text>
+          <Text>Nombre del paciente: {info.patient}</Text>
+        </View>
+
+        <View style={styles.question}>
+          <View style={styles.answers}>
+            <Text>Tipo de procedimiento quirúrgico:</Text>
+            <Text>Prótesis</Text>
+            <Text>/</Text>
+            <Text>Auxiliares</Text>
+            <Text>/</Text>
+            <Text>Artroscopias</Text>
+          </View>
+        </View>
+
+        <View style={styles.question}>
+          <View style={styles.answers}>
+            <Text>
+              ¿Recibió los dispositivos Médicos que solicitó correctamente, y en
+              buen estado?:
+            </Text>
+            <Text>Si</Text>
+            <Text>/</Text>
+            <Text>No</Text>
+          </View>
+        </View>
+
+        <View style={styles.question}>
+          <View style={styles.answers}>
+            <Text>
+              Para el Set de Implantes, ¿este se encontraba completo según lo
+              solicitado?:
+            </Text>
+            <Text>Si</Text>
+            <Text>/</Text>
+            <Text>No</Text>
+          </View>
+        </View>
+
+        <View style={styles.question}>
+          <View style={styles.answers}>
+            <Text>
+              Para el Equipo Instrumental, ¿se recibió el equipo solicitado y en
+              buen estado?:
+            </Text>
+            <Text>Si</Text>
+            <Text>/</Text>
+            <Text>No</Text>
+          </View>
+        </View>
+
+        <View style={styles.question}>
+          <View style={styles.answers}>
+            <Text>
+              Para el Equipo Instrumental, ¿este se encontraba en condiciones
+              para atender la cirugía?:
+            </Text>
+            <Text>Si</Text>
+            <Text>/</Text>
+            <Text>No</Text>
+          </View>
+        </View>
+
+        <View style={styles.question}>
+          <View style={styles.answers}>
+            <Text>
+              Para el Equipo de Artroscopia, ¿este se encontraba completo según
+              lo solicitado?:
+            </Text>
+            <Text>Si</Text>
+            <Text>/</Text>
+            <Text>No</Text>
+          </View>
+        </View>
+
+        <Text style={styles.oneQuestion}>
+          En caso de tener algún comentario adicional acerca del equipo ofrecido
+          para el procedimiento solicitado, favor de mencionarlo:
+        </Text>
+
+        <View style={styles.question}>
+          <Text>
+            Para la Asistencia Técnica, favor de indicar la opción que más se
+            acerque a su opinión:
+          </Text>
+
+          <View style={styles.answers}>
+            <Text>Puntualidad: </Text>
+            <Text>Excelente</Text>
+            <Text>/</Text>
+            <Text>Bueno</Text>
+            <Text>/</Text>
+            <Text>Regular</Text>
+            <Text>/</Text>
+            <Text>Malo</Text>
+          </View>
+
+          <View style={styles.answers}>
+            <Text>Proactividad: </Text>
+            <Text>Excelente</Text>
+            <Text>/</Text>
+            <Text>Bueno</Text>
+            <Text>/</Text>
+            <Text>Regular</Text>
+            <Text>/</Text>
+            <Text>Malo</Text>
+          </View>
+
+          <View style={styles.answers}>
+            <Text>Acompañamiento: </Text>
+            <Text>Excelente</Text>
+            <Text>/</Text>
+            <Text>Bueno</Text>
+            <Text>/</Text>
+            <Text>Regular</Text>
+            <Text>/</Text>
+            <Text>Malo</Text>
+          </View>
+
+          <View style={styles.answers}>
+            <Text>Conocimiento: </Text>
+            <Text>Excelente</Text>
+            <Text>/</Text>
+            <Text>Bueno</Text>
+            <Text>/</Text>
+            <Text>Regular</Text>
+            <Text>/</Text>
+            <Text>Malo</Text>
+          </View>
+
+          <View style={styles.answers}>
+            <Text>Asesoría: </Text>
+            <Text>Excelente</Text>
+            <Text>/</Text>
+            <Text>Bueno</Text>
+            <Text>/</Text>
+            <Text>Regular</Text>
+            <Text>/</Text>
+            <Text>Malo</Text>
+          </View>
+
+          <View style={styles.answers}>
+            <Text>Cumplimiento de lineamientos: </Text>
+            <Text>Excelente</Text>
+            <Text>/</Text>
+            <Text>Bueno</Text>
+            <Text>/</Text>
+            <Text>Regular</Text>
+            <Text>/</Text>
+            <Text>Malo</Text>
+          </View>
+
+          <View style={styles.answers}>
+            <Text>Desempeño: </Text>
+            <Text>Excelente</Text>
+            <Text>/</Text>
+            <Text>Bueno</Text>
+            <Text>/</Text>
+            <Text>Regular</Text>
+            <Text>/</Text>
+            <Text>Malo</Text>
+          </View>
+        </View>
+
+        <View
+          style={{
+            marginTop: 10,
+          }}
+        >
+          <Text style={styles.oneQuestion}>
+            1 - ¿Considera que el apoyo que se brinda por parte del personal de
+            OLTECH es apropiado?
+          </Text>
+          <Text style={styles.oneQuestion}>
+            2 - ¿Considera que el tiempo de atención asignado a su solicitud de
+            servicio fue el adecuado?
+          </Text>
+          <Text style={styles.oneQuestion}>
+            3 - ¿Considera que el servicio brindado por la organización OLTECH
+            cumple sus expectativas?
+          </Text>
+          <Text style={styles.oneQuestion}>
+            En caso de tener algún comentario adicional sobre la Asistencia
+            Técnica ofrecida, favor de mencionarlo:
+          </Text>
+        </View>
+
+        {/* Images layout */}
+        <Image src={logo} style={styles.logo} />
+        <Image src={footer2} style={styles.footer} />
         <Image src={lateral} style={styles.lateral} />
       </Page>
     </Document>

@@ -4,8 +4,11 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
+
 import styles from "../Index.module.css";
-import { Autocomplete, TextField } from "@mui/material";
+import { Autocomplete, Fab, TextField } from "@mui/material";
 import { partidasAdjudicadas } from "../../data/partidas";
 import { usePartidas } from "../../context/PartidasProvides";
 
@@ -54,26 +57,44 @@ function ModalAdd({ open, handleClose }) {
             onChange={(event, value) => {
               setSelectedPartida({
                 partida: value,
-                quantity: 0,
+                quantity: 1,
               });
             }}
           />
-          <TextField
-            fullWidth
-            id="outlined-number"
-            label="Number"
-            type="number"
-            value={selectedPartida.quantity}
-            InputLabelProps={{
-              shrink: true,
-            }}
-            onChange={(event) => {
-              setSelectedPartida({
-                ...selectedPartida,
-                quantity: event.target.value,
-              });
-            }}
-          />
+          <label htmlFor="cantidad">Cantidad</label>
+          <div className={styles.inputNumber}>
+            <button
+              onClick={() => {
+                setSelectedPartida({
+                  ...selectedPartida,
+                  quantity: selectedPartida.quantity - 1,
+                });
+              }}
+            >
+              <RemoveIcon />
+            </button>
+            <input
+              type="number"
+              id="cantidad"
+              value={selectedPartida.quantity}
+              onChange={(event) => {
+                setSelectedPartida({
+                  ...selectedPartida,
+                  quantity: event.target.value,
+                });
+              }}
+            />
+            <button
+              onClick={() => {
+                setSelectedPartida({
+                  ...selectedPartida,
+                  quantity: selectedPartida.quantity + 1,
+                });
+              }}
+            >
+              <AddIcon />
+            </button>
+          </div>
           <TextField
             fullWidth
             id="outlined-basic"

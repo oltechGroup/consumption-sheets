@@ -50,6 +50,32 @@
   gap: 1rem;
 }
 
+/* input number */
+.inputNumber {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.inputNumber input {
+  text-align: center;
+  border: none;
+  font-size: large;
+}
+.inputNumber input:focus {
+  outline: none;
+}
+.inputNumber button {
+  border: none;
+  background: none;
+  padding: 0.7rem;
+  cursor: pointer;
+}
+.inputNumber button:hover {
+  background-color: #0000000a;
+}
+
+
 @media (max-width: 1020px) {
   .container {
     padding: 1rem;

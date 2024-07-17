@@ -210,14 +210,14 @@ function Index() {
                   ))}
                 </Select>
               </FormControl>
-              <TextField
-                fullWidth
+              <input
                 id="outlined-basic"
                 label="Fecha"
                 variant="outlined"
                 type="date"
                 value={dataConsumo.date}
                 name="date"
+                style={{ padding: 10, fontFamily: "inherit", borderRadius: 5, border: '1px solid #ccc' }}
                 onChange={handleChange}
               />
             </div>
