@@ -203,8 +203,7 @@ const ConsumoPDF = ({ info, partidas }) => {
             <Text>FECHA DE CX: {info.date}</Text>
             <Text>DOCTOR: {info.doctor}</Text>
             <Text>
-              TÉCNICOS: {info.instrumentalist}
-              {info.support}{" "}
+              TÉCNICOS: {info.instrumentalist} / {info.support}
             </Text>
             <Text>PACIENTE: {info.patient}</Text>
           </View>
