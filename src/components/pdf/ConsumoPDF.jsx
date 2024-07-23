@@ -177,8 +177,9 @@ const ConsumoPDF = ({ info, partidas }) => {
     <Document>
       <Page style={styles.page} size={"A4"}>
         <View style={styles.containerFolio}>
+          <Text>HGMGG/DA/SRM/LPI116/2024</Text>
           <Text>Código: NPM-01-R04</Text>
-          <Text>Versión 1.0</Text>
+          <Text>Versión 1.1</Text>
           <Text>
             Folio: OLT{info.date.split("-")[2]}
             {info.date.split("-")[1]}
@@ -213,6 +214,9 @@ const ConsumoPDF = ({ info, partidas }) => {
               Técnicos: {info.instrumentalist} / {info.support}
             </Text>
             <Text>Paciente: {info.patient}</Text>
+            <Text>
+              Hora Inicio {info.horaInicio} - Hora Término {info.horaTermino}
+            </Text>
           </View>
         </View>
         <View>
@@ -317,9 +321,8 @@ const ConsumoPDF = ({ info, partidas }) => {
           <View style={styles.sectionFirmaItem}>
             <Text>Dra. Ana Cristina King Martínez</Text>
             <Text style={{ marginTop: 5 }}>
-              Jefa de Departamento de Ortopedia y
+              Jefa de Departamento de Ortopedia
             </Text>
-            <Text>Administradora del Contrato</Text>
           </View>
         </View>
 
@@ -334,8 +337,9 @@ const ConsumoPDF = ({ info, partidas }) => {
       {/* Encuesta de satisfaccion */}
       <Page style={styles.page2} size={"A4"}>
         <View style={styles.containerFolio}>
+          <Text>HGMGG/DA/SRM/LPI116/2024</Text>
           <Text>Código: NPM-01-R04</Text>
-          <Text>Versión 1.0</Text>
+          <Text>Versión 1.1</Text>
           <Text>
             Folio: OLT{info.date.split("-")[2]}
             {info.date.split("-")[1]}
@@ -376,8 +380,8 @@ const ConsumoPDF = ({ info, partidas }) => {
         <View style={styles.question}>
           <View style={styles.answers}>
             <Text>
-              2 - ¿Recibió los dispositivos Médicos que solicitó correctamente, y en
-              buen estado?:
+              2 - ¿Recibió los dispositivos Médicos que solicitó correctamente,
+              y en buen estado?:
             </Text>
             <Text>Si</Text>
             <Text>/</Text>
@@ -388,43 +392,7 @@ const ConsumoPDF = ({ info, partidas }) => {
         <View style={styles.question}>
           <View style={styles.answers}>
             <Text>
-              3 - Para el Set de Implantes, ¿este se encontraba completo según lo
-              solicitado?:
-            </Text>
-            <Text>Si</Text>
-            <Text>/</Text>
-            <Text>No</Text>
-          </View>
-        </View>
-
-        <View style={styles.question}>
-          <View style={styles.answers}>
-            <Text>
-              4 - Para el Equipo Instrumental, ¿se recibió el equipo solicitado y en
-              buen estado?:
-            </Text>
-            <Text>Si</Text>
-            <Text>/</Text>
-            <Text>No</Text>
-          </View>
-        </View>
-
-        <View style={styles.question}>
-          <View style={styles.answers}>
-            <Text>
-              5 - Para el Equipo Instrumental, ¿este se encontraba en condiciones
-              para atender la cirugía?:
-            </Text>
-            <Text>Si</Text>
-            <Text>/</Text>
-            <Text>No</Text>
-          </View>
-        </View>
-
-        <View style={styles.question}>
-          <View style={styles.answers}>
-            <Text>
-              6 - Para el Equipo de Artroscopia, ¿este se encontraba completo según
+              3 - Para el Set de Implantes, ¿este se encontraba completo según
               lo solicitado?:
             </Text>
             <Text>Si</Text>
@@ -433,18 +401,54 @@ const ConsumoPDF = ({ info, partidas }) => {
           </View>
         </View>
 
+        <View style={styles.question}>
+          <View style={styles.answers}>
+            <Text>
+              4 - Para el Equipo Instrumental, ¿se recibió el equipo solicitado
+              y en buen estado?:
+            </Text>
+            <Text>Si</Text>
+            <Text>/</Text>
+            <Text>No</Text>
+          </View>
+        </View>
+
+        <View style={styles.question}>
+          <View style={styles.answers}>
+            <Text>
+              5 - Para el Equipo Instrumental, ¿este se encontraba en
+              condiciones para atender la cirugía?:
+            </Text>
+            <Text>Si</Text>
+            <Text>/</Text>
+            <Text>No</Text>
+          </View>
+        </View>
+
+        <View style={styles.question}>
+          <View style={styles.answers}>
+            <Text>
+              6 - Para el Equipo de Artroscopia, ¿este se encontraba completo
+              según lo solicitado?:
+            </Text>
+            <Text>Si</Text>
+            <Text>/</Text>
+            <Text>No</Text>
+          </View>
+        </View>
+
         <Text style={styles.oneQuestion}>
-          7 - En caso de tener algún comentario adicional acerca del equipo ofrecido
-          para el procedimiento solicitado, favor de mencionarlo:
+          7 - En caso de tener algún comentario adicional acerca del equipo
+          ofrecido para el procedimiento solicitado, favor de mencionarlo:
         </Text>
 
         <View style={styles.question}>
           <Text>
-            8 - Para la Asistencia Técnica, favor de indicar la opción que más se
-            acerque a su opinión:
+            8 - Para la Asistencia Técnica, favor de indicar la opción que más
+            se acerque a su opinión:
           </Text>
 
-          <View style={{marginLeft: 20, gap: 5}}>
+          <View style={{ marginLeft: 20, gap: 5 }}>
             <View style={styles.answers}>
               <Text>8.1 - Puntualidad: </Text>
               <Text>Excelente</Text>

@@ -113,9 +113,9 @@ function Index() {
   // Modal States
   const [open, setOpen] = useState(false);
   const [selectedPartidaUpdate, setSelectedPartidaUpdate] = useState({
-    id: '',
-    code: '',
-    description: '',
+    id: "",
+    code: "",
+    description: "",
     quantity: 0,
     price: 0,
     subtotal: 0,
@@ -139,10 +139,14 @@ function Index() {
   const handleCloseAdd = () => {
     setOpenAdd(false);
   };
-  
+
   return (
     <>
-      <ModalUpdate open={open} handleClose={handleClose} partida={selectedPartidaUpdate} />
+      <ModalUpdate
+        open={open}
+        handleClose={handleClose}
+        partida={selectedPartidaUpdate}
+      />
       <ModalAdd open={openAdd} handleClose={handleCloseAdd} />
       <div className={styles.container}>
         <section className={styles.form}>
@@ -218,7 +222,13 @@ function Index() {
                 type="date"
                 value={dataConsumo.date}
                 name="date"
-                style={{ padding: 10, fontFamily: "inherit", borderRadius: 5, border: '1px solid #ccc', width: '100%' }}
+                style={{
+                  padding: 10,
+                  fontFamily: "inherit",
+                  borderRadius: 5,
+                  border: "1px solid #ccc",
+                  width: "100%",
+                }}
                 onChange={handleChange}
               />
             </div>
@@ -274,6 +284,44 @@ function Index() {
                 </Select>
               </FormControl>
             </div>
+
+            <h2>Hora Inicio - Término</h2>
+            <div className={styles.formGroup}>
+              <input
+                id="outlined-basic"
+                label="horaInicio"
+                variant="outlined"
+                placeholder="Fecha"
+                type="time"
+                value={dataConsumo.horaInicio}
+                name="horaInicio"
+                style={{
+                  padding: 10,
+                  fontFamily: "inherit",
+                  borderRadius: 5,
+                  border: "1px solid #ccc",
+                  width: "100%",
+                }}
+                onChange={handleChange}
+              />
+              <input
+                id="outlined-basic"
+                label="horaTermino"
+                variant="outlined"
+                placeholder="Fecha"
+                type="time"
+                value={dataConsumo.horaTermino}
+                name="horaTermino"
+                style={{
+                  padding: 10,
+                  fontFamily: "inherit",
+                  borderRadius: 5,
+                  border: "1px solid #ccc",
+                  width: "100%",
+                }}
+                onChange={handleChange}
+              />
+            </div>
           </div>
         </section>
 
@@ -292,6 +340,7 @@ function Index() {
             <Button
               variant="contained"
               onClick={() => {
+                console.log(dataConsumo);
                 printPDF(
                   {
                     ...dataConsumo,
@@ -340,7 +389,10 @@ function Index() {
                         <Trash size={25} weight="fill" />
                       </IconButton>
 
-                      <IconButton aria-label="edit" onClick={() => handleOpen(partida)}>
+                      <IconButton
+                        aria-label="edit"
+                        onClick={() => handleOpen(partida)}
+                      >
                         <Pencil size={25} weight="fill" />
                       </IconButton>
                     </TableCell>
