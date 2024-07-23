@@ -171,10 +171,10 @@ const ConsumoPDF = ({ info, partidas }) => {
     <Document>
       <Page style={styles.page} size={"A4"}>
         <View style={styles.containerFolio}>
-          <Text>CÓDIGO: NPM-01-R04</Text>
-          <Text>VERSIÓN: 1.0</Text>
+          <Text>Código: NPM 01 R04</Text>
+          <Text>Versión 1.0</Text>
           <Text>
-            FOLIO: OLT{info.date.split("-")[2]}
+            Folio: OLT{info.date.split("-")[2]}
             {info.date.split("-")[1]}
             {info.date.split("-")[0]}-{info.folio}
           </Text>
@@ -200,13 +200,13 @@ const ConsumoPDF = ({ info, partidas }) => {
               gap: 5,
             }}
           >
-            <Text>HOSPITAL: {info.hospital}</Text>
-            <Text>FECHA DE CX: {info.date}</Text>
-            <Text>DOCTOR: {info.doctor}</Text>
+            <Text>Hospital: {info.hospital}</Text>
+            <Text>Fecha de CX: {info.date}</Text>
+            <Text>Doctor: {info.doctor}</Text>
             <Text>
-              TÉCNICOS: {info.instrumentalist} / {info.support}
+              Técnicos: {info.instrumentalist} / {info.support}
             </Text>
-            <Text>PACIENTE: {info.patient}</Text>
+            <Text>Paciente: {info.patient}</Text>
           </View>
         </View>
         <View>
@@ -305,13 +305,13 @@ const ConsumoPDF = ({ info, partidas }) => {
         <View style={styles.sectionFirma}>
           <View style={styles.sectionFirmaItem}>
             <Text>{info.doctor}</Text>
-            <Text>MÉDICO ADSCRITO</Text>
+            <Text style={{ marginTop: 2 }}>Médico Adscrito</Text>
           </View>
 
           <View style={styles.sectionFirmaItem}>
             <Text>Dra. Ana Cristina King Martínez</Text>
-            <Text>
-              JEFA DE DEPARTAMENTO DE ORTOPEDIA Y ADMINISTRADORA DEL CONTRATO
+            <Text style={{ marginTop: 2 }}>
+              Jefa de Departamento de Ortopedia y Administradora del Contrato
             </Text>
           </View>
         </View>
