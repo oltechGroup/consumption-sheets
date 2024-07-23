@@ -171,6 +171,8 @@ const ConsumoPDF = ({ info, partidas }) => {
     <Document>
       <Page style={styles.page} size={"A4"}>
         <View style={styles.containerFolio}>
+          <Text>CÓDIGO: NPM-01-R04</Text>
+          <Text>VERSIÓN: 1.0</Text>
           <Text>
             FOLIO: OLT{info.date.split("-")[2]}
             {info.date.split("-")[1]}
@@ -181,7 +183,6 @@ const ConsumoPDF = ({ info, partidas }) => {
             {info.date.split("-")[0]}
           </Text>
         </View>
-
         <View style={{ marginBottom: 20 }}>
           <Text
             style={{
@@ -208,7 +209,6 @@ const ConsumoPDF = ({ info, partidas }) => {
             <Text>PACIENTE: {info.patient}</Text>
           </View>
         </View>
-
         <View>
           <Text
             style={{
@@ -219,7 +219,6 @@ const ConsumoPDF = ({ info, partidas }) => {
             CONSUMO
           </Text>
         </View>
-
         <View style={styles.table}>
           {/* Fila de encabezado */}
           <View style={styles.tableRow}>
@@ -264,7 +263,6 @@ const ConsumoPDF = ({ info, partidas }) => {
             </View>
           ))}
         </View>
-
         <View style={styles.table}>
           <View style={styles.tableRow}>
             <View style={styles.tableCol}>
@@ -291,7 +289,6 @@ const ConsumoPDF = ({ info, partidas }) => {
             </View>
           </View>
         </View>
-
         <View>
           <Text
             style={{
@@ -302,21 +299,22 @@ const ConsumoPDF = ({ info, partidas }) => {
             NOTAS:
           </Text>
         </View>
-
         <View
           style={{ borderTop: 1, borderBottom: 1, height: 20, marginTop: 10 }}
         ></View>
-
         <View style={styles.sectionFirma}>
           <View style={styles.sectionFirmaItem}>
             <Text>{info.doctor}</Text>
+            <Text>MÉDICO ADSCRITO</Text>
           </View>
 
           <View style={styles.sectionFirmaItem}>
             <Text>Dra. Ana Cristina King Martínez</Text>
+            <Text>
+              JEFA DE DEPARTAMENTO DE ORTOPEDIA Y ADMINISTRADORA DEL CONTRATO
+            </Text>
           </View>
         </View>
-
         {/* Images layout */}
         <Image src={logo} style={styles.logo} />
         <Image src={footer} style={styles.footer} />
