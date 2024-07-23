@@ -142,6 +142,12 @@ const styles = StyleSheet.create({
     borderBottom: 1,
     borderBottomColor: "#000",
   },
+
+  numeroPagina: {
+    position: "absolute",
+    bottom: 20,
+    right: 50,
+  },
 });
 
 const formatMoney = (number, currency = "$") => {
@@ -171,7 +177,7 @@ const ConsumoPDF = ({ info, partidas }) => {
     <Document>
       <Page style={styles.page} size={"A4"}>
         <View style={styles.containerFolio}>
-          <Text>Código: NPM 01 R04</Text>
+          <Text>Código: NPM-01-R04</Text>
           <Text>Versión 1.0</Text>
           <Text>
             Folio: OLT{info.date.split("-")[2]}
@@ -305,16 +311,20 @@ const ConsumoPDF = ({ info, partidas }) => {
         <View style={styles.sectionFirma}>
           <View style={styles.sectionFirmaItem}>
             <Text>{info.doctor}</Text>
-            <Text style={{ marginTop: 2 }}>Médico Adscrito</Text>
+            <Text style={{ marginTop: 5 }}>Médico Adscrito</Text>
           </View>
 
           <View style={styles.sectionFirmaItem}>
             <Text>Dra. Ana Cristina King Martínez</Text>
-            <Text style={{ marginTop: 2 }}>
-              Jefa de Departamento de Ortopedia y Administradora del Contrato
+            <Text style={{ marginTop: 5 }}>
+              Jefa de Departamento de Ortopedia y
             </Text>
+            <Text>Administradora del Contrato</Text>
           </View>
         </View>
+
+        <Text style={styles.numeroPagina}>Pag. 1 / 2</Text>
+
         {/* Images layout */}
         <Image src={logo} style={styles.logo} />
         <Image src={footer} style={styles.footer} />
@@ -324,8 +334,10 @@ const ConsumoPDF = ({ info, partidas }) => {
       {/* Encuesta de satisfaccion */}
       <Page style={styles.page2} size={"A4"}>
         <View style={styles.containerFolio}>
+          <Text>Código: NPM-01-R04</Text>
+          <Text>Versión 1.0</Text>
           <Text>
-            FOLIO: OLT{info.date.split("-")[2]}
+            Folio: OLT{info.date.split("-")[2]}
             {info.date.split("-")[1]}
             {info.date.split("-")[0]}-{info.folio}
           </Text>
@@ -355,7 +367,7 @@ const ConsumoPDF = ({ info, partidas }) => {
             <Text>Tipo de procedimiento quirúrgico:</Text>
             <Text>Prótesis</Text>
             <Text>/</Text>
-            <Text>Auxiliares</Text>
+            <Text>Osteosíntesis</Text>
             <Text>/</Text>
             <Text>Artroscopias</Text>
           </View>
@@ -532,6 +544,8 @@ const ConsumoPDF = ({ info, partidas }) => {
             Técnica ofrecida, favor de mencionarlo:
           </Text>
         </View>
+
+        <Text style={styles.numeroPagina}>Pag. 2 / 2</Text>
 
         {/* Images layout */}
         <Image src={logo} style={styles.logo} />
