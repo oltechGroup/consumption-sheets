@@ -364,7 +364,7 @@ const ConsumoPDF = ({ info, partidas }) => {
 
         <View style={styles.question}>
           <View style={styles.answers}>
-            <Text>Tipo de procedimiento quirúrgico:</Text>
+            <Text>1 - Tipo de procedimiento quirúrgico:</Text>
             <Text>Prótesis</Text>
             <Text>/</Text>
             <Text>Osteosíntesis</Text>
@@ -376,7 +376,7 @@ const ConsumoPDF = ({ info, partidas }) => {
         <View style={styles.question}>
           <View style={styles.answers}>
             <Text>
-              ¿Recibió los dispositivos Médicos que solicitó correctamente, y en
+              2 - ¿Recibió los dispositivos Médicos que solicitó correctamente, y en
               buen estado?:
             </Text>
             <Text>Si</Text>
@@ -388,7 +388,7 @@ const ConsumoPDF = ({ info, partidas }) => {
         <View style={styles.question}>
           <View style={styles.answers}>
             <Text>
-              Para el Set de Implantes, ¿este se encontraba completo según lo
+              3 - Para el Set de Implantes, ¿este se encontraba completo según lo
               solicitado?:
             </Text>
             <Text>Si</Text>
@@ -400,7 +400,7 @@ const ConsumoPDF = ({ info, partidas }) => {
         <View style={styles.question}>
           <View style={styles.answers}>
             <Text>
-              Para el Equipo Instrumental, ¿se recibió el equipo solicitado y en
+              4 - Para el Equipo Instrumental, ¿se recibió el equipo solicitado y en
               buen estado?:
             </Text>
             <Text>Si</Text>
@@ -412,7 +412,7 @@ const ConsumoPDF = ({ info, partidas }) => {
         <View style={styles.question}>
           <View style={styles.answers}>
             <Text>
-              Para el Equipo Instrumental, ¿este se encontraba en condiciones
+              5 - Para el Equipo Instrumental, ¿este se encontraba en condiciones
               para atender la cirugía?:
             </Text>
             <Text>Si</Text>
@@ -424,7 +424,7 @@ const ConsumoPDF = ({ info, partidas }) => {
         <View style={styles.question}>
           <View style={styles.answers}>
             <Text>
-              Para el Equipo de Artroscopia, ¿este se encontraba completo según
+              6 - Para el Equipo de Artroscopia, ¿este se encontraba completo según
               lo solicitado?:
             </Text>
             <Text>Si</Text>
@@ -434,91 +434,93 @@ const ConsumoPDF = ({ info, partidas }) => {
         </View>
 
         <Text style={styles.oneQuestion}>
-          En caso de tener algún comentario adicional acerca del equipo ofrecido
+          7 - En caso de tener algún comentario adicional acerca del equipo ofrecido
           para el procedimiento solicitado, favor de mencionarlo:
         </Text>
 
         <View style={styles.question}>
           <Text>
-            Para la Asistencia Técnica, favor de indicar la opción que más se
+            8 - Para la Asistencia Técnica, favor de indicar la opción que más se
             acerque a su opinión:
           </Text>
 
-          <View style={styles.answers}>
-            <Text>Puntualidad: </Text>
-            <Text>Excelente</Text>
-            <Text>/</Text>
-            <Text>Bueno</Text>
-            <Text>/</Text>
-            <Text>Regular</Text>
-            <Text>/</Text>
-            <Text>Malo</Text>
-          </View>
+          <View style={{marginLeft: 20, gap: 5}}>
+            <View style={styles.answers}>
+              <Text>8.1 - Puntualidad: </Text>
+              <Text>Excelente</Text>
+              <Text>/</Text>
+              <Text>Bueno</Text>
+              <Text>/</Text>
+              <Text>Regular</Text>
+              <Text>/</Text>
+              <Text>Malo</Text>
+            </View>
 
-          <View style={styles.answers}>
-            <Text>Proactividad: </Text>
-            <Text>Excelente</Text>
-            <Text>/</Text>
-            <Text>Bueno</Text>
-            <Text>/</Text>
-            <Text>Regular</Text>
-            <Text>/</Text>
-            <Text>Malo</Text>
-          </View>
+            <View style={styles.answers}>
+              <Text>8.2 - Proactividad: </Text>
+              <Text>Excelente</Text>
+              <Text>/</Text>
+              <Text>Bueno</Text>
+              <Text>/</Text>
+              <Text>Regular</Text>
+              <Text>/</Text>
+              <Text>Malo</Text>
+            </View>
 
-          <View style={styles.answers}>
-            <Text>Acompañamiento: </Text>
-            <Text>Excelente</Text>
-            <Text>/</Text>
-            <Text>Bueno</Text>
-            <Text>/</Text>
-            <Text>Regular</Text>
-            <Text>/</Text>
-            <Text>Malo</Text>
-          </View>
+            <View style={styles.answers}>
+              <Text>8.3 - Acompañamiento: </Text>
+              <Text>Excelente</Text>
+              <Text>/</Text>
+              <Text>Bueno</Text>
+              <Text>/</Text>
+              <Text>Regular</Text>
+              <Text>/</Text>
+              <Text>Malo</Text>
+            </View>
 
-          <View style={styles.answers}>
-            <Text>Conocimiento: </Text>
-            <Text>Excelente</Text>
-            <Text>/</Text>
-            <Text>Bueno</Text>
-            <Text>/</Text>
-            <Text>Regular</Text>
-            <Text>/</Text>
-            <Text>Malo</Text>
-          </View>
+            <View style={styles.answers}>
+              <Text>8.4 - Conocimiento: </Text>
+              <Text>Excelente</Text>
+              <Text>/</Text>
+              <Text>Bueno</Text>
+              <Text>/</Text>
+              <Text>Regular</Text>
+              <Text>/</Text>
+              <Text>Malo</Text>
+            </View>
 
-          <View style={styles.answers}>
-            <Text>Asesoría: </Text>
-            <Text>Excelente</Text>
-            <Text>/</Text>
-            <Text>Bueno</Text>
-            <Text>/</Text>
-            <Text>Regular</Text>
-            <Text>/</Text>
-            <Text>Malo</Text>
-          </View>
+            <View style={styles.answers}>
+              <Text>8.5 - Asesoría: </Text>
+              <Text>Excelente</Text>
+              <Text>/</Text>
+              <Text>Bueno</Text>
+              <Text>/</Text>
+              <Text>Regular</Text>
+              <Text>/</Text>
+              <Text>Malo</Text>
+            </View>
 
-          <View style={styles.answers}>
-            <Text>Cumplimiento de lineamientos: </Text>
-            <Text>Excelente</Text>
-            <Text>/</Text>
-            <Text>Bueno</Text>
-            <Text>/</Text>
-            <Text>Regular</Text>
-            <Text>/</Text>
-            <Text>Malo</Text>
-          </View>
+            <View style={styles.answers}>
+              <Text>8.6 - Cumplimiento de lineamientos: </Text>
+              <Text>Excelente</Text>
+              <Text>/</Text>
+              <Text>Bueno</Text>
+              <Text>/</Text>
+              <Text>Regular</Text>
+              <Text>/</Text>
+              <Text>Malo</Text>
+            </View>
 
-          <View style={styles.answers}>
-            <Text>Desempeño: </Text>
-            <Text>Excelente</Text>
-            <Text>/</Text>
-            <Text>Bueno</Text>
-            <Text>/</Text>
-            <Text>Regular</Text>
-            <Text>/</Text>
-            <Text>Malo</Text>
+            <View style={styles.answers}>
+              <Text>8.7 - Desempeño: </Text>
+              <Text>Excelente</Text>
+              <Text>/</Text>
+              <Text>Bueno</Text>
+              <Text>/</Text>
+              <Text>Regular</Text>
+              <Text>/</Text>
+              <Text>Malo</Text>
+            </View>
           </View>
         </View>
 
@@ -528,15 +530,15 @@ const ConsumoPDF = ({ info, partidas }) => {
           }}
         >
           <Text style={styles.oneQuestion}>
-            1 - ¿Considera que el apoyo que se brinda por parte del personal de
+            9 - ¿Considera que el apoyo que se brinda por parte del personal de
             OLTECH es apropiado?
           </Text>
           <Text style={styles.oneQuestion}>
-            2 - ¿Considera que el tiempo de atención asignado a su solicitud de
+            10 - ¿Considera que el tiempo de atención asignado a su solicitud de
             servicio fue el adecuado?
           </Text>
           <Text style={styles.oneQuestion}>
-            3 - ¿Considera que el servicio brindado por la organización OLTECH
+            11 - ¿Considera que el servicio brindado por la organización OLTECH
             cumple sus expectativas?
           </Text>
           <Text style={styles.oneQuestion}>
