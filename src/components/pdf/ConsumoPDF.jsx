@@ -330,7 +330,7 @@ const ConsumoPDF = ({ info, partidas }) => {
 
         {/* Images layout */}
         <Image src={logo} style={styles.logo} />
-        <Image src={footer} style={styles.footer} />
+        <Image src={footer2} style={styles.footer} />
         <Image src={lateral} style={styles.lateral} />
       </Page>
 
