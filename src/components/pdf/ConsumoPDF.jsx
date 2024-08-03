@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Page,
   Text,
@@ -172,6 +171,45 @@ const formatMoney = (number, currency = "$") => {
   return currency + formattedNumber;
 };
 
+const renderPartidas = (partidas) => {
+  let totalWords = 0;
+  let lastPosition = 0;
+
+  partidas.map((partida, index) => {
+    partida.description.split(" ").map((word) => {
+      totalWords++;
+    });
+
+    if (totalWords > 290) {
+      lastPosition = index;
+    }
+  })
+
+  return partidas.splice(0, lastPosition).map((partida) => {
+    return (
+      <View style={styles.tableRow}>
+        <View style={styles.tableCol}>
+          <Text style={styles.tableCell}>{partida.code}</Text>
+        </View>
+        <View style={styles.tableColDescription}>
+          <Text style={styles.tableCell}>{partida.description}</Text>
+        </View>
+        <View style={styles.tableCol}>
+          <Text style={styles.tableCell}>{partida.quantity}</Text>
+        </View>
+        <View style={styles.tableCol}>
+          <Text style={styles.tableCell}>{formatMoney(partida.price)}</Text>
+        </View>
+        <View style={styles.tableColSubtotal}>
+          <Text style={styles.tableCell}>
+            {formatMoney(partida.quantity * partida.price)}
+          </Text>
+        </View>
+      </View>
+    );
+  });
+};
+
 const ConsumoPDF = ({ info, partidas }) => {
   return (
     <Document>
@@ -179,7 +217,7 @@ const ConsumoPDF = ({ info, partidas }) => {
         <View style={styles.containerFolio}>
           <Text>HGMGG/DA/SRM/LPI116/2024</Text>
           <Text>Código: NPM-01-R04</Text>
-          <Text>Versión 1.1</Text>
+          <Text>Versión 1.1.2</Text>
           <Text>
             Folio: OLT{info.date.split("-")[2]}
             {info.date.split("-")[1]}
@@ -249,29 +287,7 @@ const ConsumoPDF = ({ info, partidas }) => {
             </View>
           </View>
           {/* Fila de datos */}
-          {partidas.map((partida, index) => (
-            <View style={styles.tableRow}>
-              <View style={styles.tableCol}>
-                <Text style={styles.tableCell}>{partida.code}</Text>
-              </View>
-              <View style={styles.tableColDescription}>
-                <Text style={styles.tableCell}>{partida.description}</Text>
-              </View>
-              <View style={styles.tableCol}>
-                <Text style={styles.tableCell}>{partida.quantity}</Text>
-              </View>
-              <View style={styles.tableCol}>
-                <Text style={styles.tableCell}>
-                  {formatMoney(partida.price)}
-                </Text>
-              </View>
-              <View style={styles.tableColSubtotal}>
-                <Text style={styles.tableCell}>
-                  {formatMoney(partida.quantity * partida.price)}
-                </Text>
-              </View>
-            </View>
-          ))}
+          {renderPartidas(partidas)}
         </View>
         <View style={styles.table}>
           <View style={styles.tableRow}>
