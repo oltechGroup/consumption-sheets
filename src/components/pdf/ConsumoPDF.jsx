@@ -179,7 +179,7 @@ const ConsumoPDF = ({ info, partidas }) => {
         <View style={styles.containerFolio}>
           <Text>HGMGG/DA/SRM/LPI116/2024</Text>
           <Text>Código: NPM-01-R04</Text>
-          <Text>Versión 1.2</Text>
+          <Text>Versión 1.1</Text>
           <Text>
             Folio: OLT{info.date.split("-")[2]}
             {info.date.split("-")[1]}
@@ -262,12 +262,12 @@ const ConsumoPDF = ({ info, partidas }) => {
               </View>
               <View style={styles.tableCol}>
                 <Text style={styles.tableCell}>
-                  {/* {formatMoney(partida.price)} */}
+                  {formatMoney(partida.price)}
                 </Text>
               </View>
               <View style={styles.tableColSubtotal}>
                 <Text style={styles.tableCell}>
-                  {/* {formatMoney(partida.quantity * partida.price)} */}
+                  {formatMoney(partida.quantity * partida.price)}
                 </Text>
               </View>
             </View>
@@ -288,14 +288,14 @@ const ConsumoPDF = ({ info, partidas }) => {
               <Text style={styles.tableCell}>Total</Text>
             </View>
             <View style={styles.tableColSubtotal}>
-              {/* <Text style={styles.tableCell}>
+              <Text style={styles.tableCell}>
                 {formatMoney(
                   partidas.reduce(
                     (acc, partida) => acc + partida.quantity * partida.price,
                     0
                   )
                 )}
-              </Text> */}
+              </Text>
             </View>
           </View>
         </View>
