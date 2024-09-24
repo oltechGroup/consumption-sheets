@@ -178,7 +178,7 @@ const ConsumoPDF = ({ info, partidas }) => {
       <Page style={styles.page} size={"A4"}>
         <View style={styles.containerFolio}>
           <Text>HGMGG/DA/SRM/LPI116/2024</Text>
-          <Text>Código: NPM-01-R04</Text>
+          <Text>Código: MPM-01-R04</Text>
           <Text>Versión 1.1</Text>
           <Text>
             Folio: OLT{info.date.split("-")[2]}
@@ -338,7 +338,7 @@ const ConsumoPDF = ({ info, partidas }) => {
       <Page style={styles.page2} size={"A4"}>
         <View style={styles.containerFolio}>
           <Text>HGMGG/DA/SRM/LPI116/2024</Text>
-          <Text>Código: NPM-01-R04</Text>
+          <Text>Código: MPM-01-R04</Text>
           <Text>Versión 1.1</Text>
           <Text>
             Folio: OLT{info.date.split("-")[2]}
