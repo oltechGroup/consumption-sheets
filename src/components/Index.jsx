@@ -284,44 +284,6 @@ function Index() {
                 </Select>
               </FormControl>
             </div>
-
-            <h2>Hora Inicio - Término</h2>
-            <div className={styles.formGroup}>
-              <input
-                id="outlined-basic"
-                label="horaInicio"
-                variant="outlined"
-                placeholder="Fecha"
-                type="time"
-                value={dataConsumo.horaInicio}
-                name="horaInicio"
-                style={{
-                  padding: 10,
-                  fontFamily: "inherit",
-                  borderRadius: 5,
-                  border: "1px solid #ccc",
-                  width: "100%",
-                }}
-                onChange={handleChange}
-              />
-              <input
-                id="outlined-basic"
-                label="horaTermino"
-                variant="outlined"
-                placeholder="Fecha"
-                type="time"
-                value={dataConsumo.horaTermino}
-                name="horaTermino"
-                style={{
-                  padding: 10,
-                  fontFamily: "inherit",
-                  borderRadius: 5,
-                  border: "1px solid #ccc",
-                  width: "100%",
-                }}
-                onChange={handleChange}
-              />
-            </div>
           </div>
         </section>
 

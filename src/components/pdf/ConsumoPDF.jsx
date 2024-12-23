@@ -98,6 +98,8 @@ const styles = StyleSheet.create({
     width: "80%",
     marginHorizontal: "auto",
     flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
     gap: 16,
     marginTop: 60,
   },
@@ -179,7 +181,7 @@ const ConsumoPDF = ({ info, partidas }) => {
         <View style={styles.containerFolio}>
           <Text>HGMGG/DA/SRM/LPI116/2024</Text>
           <Text>Código: MPM-01-R04</Text>
-          <Text>Versión 1.1</Text>
+          <Text>Versión 1.1.2</Text>
           <Text>
             Folio: OLT{info.date.split("-")[2]}
             {info.date.split("-")[1]}
@@ -214,9 +216,6 @@ const ConsumoPDF = ({ info, partidas }) => {
               Técnicos: {info.instrumentalist} / {info.support}
             </Text>
             <Text>Paciente: {info.patient}</Text>
-            <Text>
-              Hora Inicio {info.horaInicio} - Hora Término {info.horaTermino}
-            </Text>
           </View>
         </View>
         <View>
@@ -313,11 +312,6 @@ const ConsumoPDF = ({ info, partidas }) => {
           style={{ borderTop: 1, borderBottom: 1, height: 20, marginTop: 10 }}
         ></View>
         <View style={styles.sectionFirma}>
-          <View style={styles.sectionFirmaItem}>
-            <Text>{info.doctor}</Text>
-            <Text style={{ marginTop: 5 }}>Médico Adscrito</Text>
-          </View>
-
           <View style={styles.sectionFirmaItem}>
             <Text>Dra. Ana Cristina King Martínez</Text>
             <Text style={{ marginTop: 5 }}>
