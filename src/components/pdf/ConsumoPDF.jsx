@@ -179,7 +179,7 @@ const ConsumoPDF = ({ info, partidas }) => {
     <Document>
       <Page style={styles.page} size={"A4"}>
         <View style={styles.containerFolio}>
-          <Text>HGMGG/DA/SRM/LPI116/2024</Text>
+          <Text>HGMGG-DA-SRM-CAAS137-2025</Text>
           <Text>Código: MPM-01-R04</Text>
           <Text>Versión 1.1.2</Text>
           <Text>
