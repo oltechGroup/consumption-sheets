@@ -181,7 +181,7 @@ const ConsumoPDF = ({ info, partidas }) => {
         <View style={styles.containerFolio}>
           <Text>HGMGG-DA-SRM-CAAS137-2025</Text>
           <Text>MPM-01-R04</Text>
-          <Text>Versión 3</Text>
+          <Text>Versión 03</Text>
           <Text>
             Folio: OLT{info.date.split("-")[2]}
             {info.date.split("-")[1]}
@@ -294,9 +294,6 @@ const ConsumoPDF = ({ info, partidas }) => {
             </View>
           </View>
         </View>
-        
-          
-       
         <View>
           <Text
             style={{
