@@ -180,16 +180,12 @@ const ConsumoPDF = ({ info, partidas }) => {
       <Page style={styles.page} size={"A4"}>
         <View style={styles.containerFolio}>
           <Text>HGMGG-DA-SRM-CAAS137-2025</Text>
-          <Text>Código: MPM-01-R04</Text>
-          <Text>Versión 1.1.2</Text>
+          <Text>MPM-01-R04</Text>
+          <Text>Versión 3</Text>
           <Text>
             Folio: OLT{info.date.split("-")[2]}
             {info.date.split("-")[1]}
             {info.date.split("-")[0]}-{info.folio}
-          </Text>
-          <Text>
-            {info.date.split("-")[2]}/{info.date.split("-")[1]}/
-            {info.date.split("-")[0]}
           </Text>
         </View>
         <View style={{ marginBottom: 20 }}>
@@ -298,6 +294,9 @@ const ConsumoPDF = ({ info, partidas }) => {
             </View>
           </View>
         </View>
+        
+          
+       
         <View>
           <Text
             style={{
@@ -320,7 +319,7 @@ const ConsumoPDF = ({ info, partidas }) => {
           </View>
         </View>
 
-        <Text style={styles.numeroPagina}>Pag. 1</Text>
+        <Text style={styles.numeroPagina}>Pág. 2/2</Text>
 {/* Images layout */}
         {/* Images layout */}
         
