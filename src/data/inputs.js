@@ -170,6 +170,14 @@ export const instrumentalists = [
     phone: "",
     email: "",
   },
+  {
+    id: 10,
+    name: "EXTERNO",
+    specialty: "",
+    location: "",
+    phone: "",
+    email: "",
+  },
 ];
 
 export const supports = [
@@ -240,6 +248,14 @@ export const supports = [
   {
     id: 9,
     name: "Yosafat Franco",
+    specialty: "",
+    location: "",
+    phone: "",
+    email: "",
+  },
+  {
+    id: 10,
+    name: "EXTERNO",
     specialty: "",
     location: "",
     phone: "",
