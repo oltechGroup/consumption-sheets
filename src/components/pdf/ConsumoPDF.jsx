@@ -17,7 +17,7 @@ import footer2 from "../../assets/images/footer.jpg";
 const styles = StyleSheet.create({
   page: {
     padding: 16,
-    paddingTop: 80,
+    paddingTop: 100,
     fontSize: 11,
     paddingRight: 46,
     position: "relative",
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
   lateral: {
     position: "absolute",
     width: 30,
-    height: "100vh",
+    height: "100%",
     right: 0,
   },
 
@@ -319,8 +319,7 @@ const ConsumoPDF = ({ info, partidas }) => {
         <Text style={styles.numeroPagina}>Pág. 2/2</Text>
 {/* Images layout */}
         {/* Images layout */}
-        
-
+    
         {/* Images layout */}
         <Image src={logo} style={styles.logo} />
         <Image src={footer2} style={styles.footer} />
