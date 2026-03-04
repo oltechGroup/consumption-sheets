@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Page,
   Text,
@@ -9,7 +8,6 @@ import {
 } from "@react-pdf/renderer";
 
 import logo from "../../assets/images/logo-name.png";
-import footer from "../../assets/images/footer-2.jpg";
 import lateral from "../../assets/images/franja-lateral.png";
 import footer2 from "../../assets/images/footer.jpg";
 
@@ -244,7 +242,8 @@ const ConsumoPDF = ({ info, partidas }) => {
             </View>
           </View>
           {/* Fila de datos */}
-          {partidas.map((partida, index) => (
+          {partidas.map((partida) => (
+            // eslint-disable-next-line react/jsx-key
             <View style={styles.tableRow}>
               <View style={styles.tableCol}>
                 <Text style={styles.tableCell}>{partida.code}</Text>

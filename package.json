@@ -17,6 +17,7 @@
     "@phosphor-icons/react": "^2.1.5",
     "@react-pdf/renderer": "^3.4.4",
     "consumption-sheets": "file:",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
