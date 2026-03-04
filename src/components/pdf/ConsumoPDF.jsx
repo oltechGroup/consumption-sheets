@@ -311,7 +311,7 @@ const ConsumoPDF = ({ info, partidas }) => {
           <View style={styles.sectionFirmaItem}>
             <Text>Dr. Roberto Fernando Espinosa López</Text>
             <Text style={{ marginTop: 5 }}>
-              Encargado de la divición de Ortopedia
+              Encargado de la división de Ortopedia
             </Text>
           </View>
         </View>
