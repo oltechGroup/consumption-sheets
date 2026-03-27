@@ -148,14 +148,6 @@ export const instrumentalists = [
   },
   {
     id: 7,
-    name: "Estrella Villalba",
-    specialty: "",
-    location: "",
-    phone: "",
-    email: "",
-  },
-  {
-    id: 8,
     name: "EXTERNO",
     specialty: "",
     location: "",
@@ -215,14 +207,6 @@ export const supports = [
   },
   {
     id: 7,
-    name: "Estrella Villalba",
-    specialty: "",
-    location: "",
-    phone: "",
-    email: "",
-  },
-  {
-    id: 8,
     name: "EXTERNO",
     specialty: "",
     location: "",
